@@ -1,1 +1,3 @@
-# processamento_de_imagens
+# Processamento de imagens
+
+## Funções:
