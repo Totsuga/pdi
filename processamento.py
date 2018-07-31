@@ -292,7 +292,14 @@ def erode(imagem, elemento):
 				imagem_saida[pos_x][pos_y] = min(valor)
 	return imagem_saida
 
+def rotacionaElem(elemento):
+	newElement = np.zeros((elemento.shape[0], elemento.shape[1]))
+	for i in range(len(elemento)):
+		newElement[i] = elemento[i][::-1]
+	return newElement[::-1]
+
 def dilate(imagem, elemento):
+	elemento = rotacionaElem(elemento)
 	corr_linha = int((len(elemento)-1)/2)
 	corr_coluna = int((np.size(elemento[0])-1)/2)
 	imagem_extrapolada = extrapola(imagem, len(elemento), np.size(elemento[0]))
