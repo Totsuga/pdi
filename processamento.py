@@ -255,8 +255,6 @@ def my_ft(img):
 		for v in range(n):
 			for x in range(m):
 				for y in range(n):
-					#a = (np.cos(2*np.pi*((u*x)/m+(v*y)/n)) - 1j*np.sin(2*np.pi*((u*x)/m+(v*y)/n)))
-
 					a = np.exp(-1j*2*np.pi*((u*x/m)+(v*y/n)))
 					g[u][v] = g[u][v]+a*img[x][y]
 	return g*(1/(m*n))
